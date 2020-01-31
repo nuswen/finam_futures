@@ -9,9 +9,9 @@ import requests
 from time import sleep
 
 
-rawData = models.data.query.filter_by(Id = 1).first()
+"""rawData = models.data.query.filter_by(Id = 1).first()
 data = rawData.Data
-data = json.loads(data)
+data = json.loads(data)"""
 
 @bot.message_handler(commands=['prepare'])
 def contentToFileId(msg):
