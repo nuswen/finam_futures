@@ -15,7 +15,12 @@ data = json.loads(data)"""
 
 @bot.message_handler(commands=['prepare'])
 def contentToFileId(msg):
-    pass
+    i = 'http://tg.lfinco.ru/ED.txt'
+    rawDoc = requests.get(i,stream = True)
+    doc = rawDoc.raw
+    postMsg = bot.send_doc(msg.chat.id, doc, None)
+    poster(bot, msg.chat.id, text=postMsg)
+    
     """rawData = models.data.query.filter_by(Id = 1).first()
     data = rawData.Data
     data = json.loads(data)
