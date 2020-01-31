@@ -15,7 +15,8 @@ data = json.loads(data)
 
 @bot.message_handler(commands=['prepare'])
 def contentToFileId(msg):
-    rawData = models.data.query.filter_by(Id = 1).first()
+    pass
+    """rawData = models.data.query.filter_by(Id = 1).first()
     data = rawData.Data
     data = json.loads(data)
     if rawData.Prepare == False or rawData.Prepare == None:
@@ -32,7 +33,7 @@ def contentToFileId(msg):
             s = s.replace(i,fileId)
         rawData.Data = s
         rawData.Prepare = True
-        db.session.commit()
+        db.session.commit()"""
 
 
 @bot.message_handler(commands=['start'])
