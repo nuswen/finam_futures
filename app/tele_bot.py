@@ -15,7 +15,7 @@ data = json.loads(data)"""
 
 @bot.message_handler(commands=['prepare'])
 def contentToFileId(msg):
-    i = 'http://tg.lfinco.ru/ff.html'
+    i = 'http://tg.lfinco.ru/ED.txt'
     rawDoc = requests.get(i,stream = True)
     doc = rawDoc.raw
     postMsg = bot.send_document(msg.chat.id, doc, None)
